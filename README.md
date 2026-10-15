@@ -1,18 +1,19 @@
 # Dhruv Patel — Portfolio
 
-A responsive, single-page portfolio. Open `index.html` in a browser to preview it; there is no build step.
+A responsive, single-page portfolio built with plain HTML, CSS, and JavaScript. Open `index.html` in a browser to preview it; there is no build step.
 
-## About the portfolio
+## About
 
-- The site presents Dhruv as a student exploring software built by AI agents. The agents plan and implement projects; Dhruv reviews the results and requests improvements.
-- The workflow section explains his role without claiming that he wrote code, planned the project, or has already found a specific bug.
-- The skills section includes Dhruv's stated Python and machine-learning experience alongside his AI-output review and feedback skills. It keeps his personal experience distinct from the AI agents' implementation of featured projects.
-- TradeSageAI is the main project, described as a trading intelligence platform with ML-driven buy/sell signals for stocks and crypto, plus an asset portfolio.
-- The hero uses a clearly labeled illustrative interface concept, not a screenshot of the actual TradeSageAI product.
-- The portfolio website is also listed as a project and links to its source repository at `https://github.com/dcp857/portfolio`.
-- The project list and descriptions are curated so the page shows only projects Dhruv wants to feature; GitHub API responses cannot add unrelated repositories or overwrite those summaries.
-- Each curated project fetches its current language, star count, and last updated date from GitHub when the page loads. If GitHub is unavailable, the project descriptions and links remain visible.
-- GitHub and LinkedIn profile links are included. The project card links to its repository.
-- Edit colors and layout in `styles.css`.
+The site presents Dhruv as a developer building AI-powered software with AI coding agents. It describes his process as defining the product, directing the build, testing results, and shipping iterations. The skills section includes Python, web fundamentals, machine learning concepts, mathematics, agent specs and prompting, testing, debugging, and GitHub Pages.
 
-Google Fonts load from Google Fonts; system fallbacks are included.
+TradeSageAI is the featured project. It is described as a trading intelligence platform with ML-driven buy and sell signals for stocks and crypto, plus an asset portfolio. A small GitHub API request adds current language, star count, and update date; an eight-second timeout and static GitHub link fallback keep the project useful if the API is unavailable.
+
+## Details to add
+
+- Replace the TradeSageAI screenshot placeholder with a genuine product screenshot.
+- Confirm the ML approach/model, data sources, tech stack, live demo URL (or confirm there is none), and any real results/backtest figures.
+- Add details for any additional projects before adding their cards.
+- Add a resume PDF and link it from the contact section.
+- Add a 1200×630 social preview image and set the Open Graph and Twitter image tags.
+
+Google Fonts load from Google Fonts; system fallbacks are included. Edit colors and layout in `styles.css`.

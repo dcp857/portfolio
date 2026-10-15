@@ -99,3 +99,34 @@
 .skill-card p{max-width:310px;margin:0;color:#96948b;font-size:10px;line-height:1.7}
 @media(max-width:850px){.skills-section{padding-top:72px;padding-bottom:76px}.skills-heading{gap:25px}.skills-grid{gap:11px}.skill-card{padding:17px 15px}.skill-card h3{font-size:14px}}
 @media(max-width:620px){.skills-section{padding-top:63px;padding-bottom:66px}.skills-heading{align-items:flex-start;flex-direction:column;gap:17px;margin-bottom:26px}.skills-heading h2{font-size:52px}.skills-heading>p{max-width:none}.skills-grid{grid-template-columns:1fr;gap:10px}.skill-card{min-height:0;padding:16px}.skill-card h3{margin:15px 0 6px}.skill-card p{max-width:none}}
+
+/* Portfolio refresh: real screenshot and project cards can be dropped in without changing the layout. */
+:focus-visible{outline:2px solid var(--lime);outline-offset:4px}
+.screenshot-todo{display:grid;place-items:center;background:radial-gradient(circle at 72% 28%,#334024 0 1px,transparent 2px),linear-gradient(140deg,#23251e,#171714 65%);background-size:34px 34px,auto;color:#d2f06b}
+.screenshot-todo>span{text-align:center;font:500 clamp(28px,5vw,58px)/1.05 var(--display);letter-spacing:-.07em}
+.screenshot-todo small{color:#c0bfb4;font:8px var(--mono);letter-spacing:.15em}
+.skill-tags{display:flex;flex-wrap:wrap;gap:7px;list-style:none;padding:0;margin:0}
+.skill-tags li{padding:6px 8px;border:1px solid rgba(241,238,231,.2);border-radius:2px;color:#c0beb4;font:9px var(--mono)}
+.more-projects{margin-top:66px}
+.more-projects-heading{display:flex;align-items:center;justify-content:space-between;padding-bottom:13px;border-bottom:1px solid var(--line);margin-bottom:17px}
+.more-projects-heading h3{margin:0;font:500 20px var(--display);letter-spacing:-.04em}
+.more-projects-heading>span{color:#b3b1a7;font:9px var(--mono)}
+.more-projects-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.more-project-card{min-width:0;padding:18px;border:1px solid rgba(241,238,231,.16);border-radius:4px;background:rgba(255,255,255,.025)}
+.more-project-top{display:flex;flex-direction:column;gap:7px}
+.more-project-top h4{margin:0;font:500 16px var(--display)}
+.more-project-top>span{color:#b7b5ab;font:8px var(--mono);letter-spacing:.04em}
+.more-project-card>p{min-height:52px;margin:14px 0;color:#c0beb4;font-size:11px;line-height:1.65}
+.more-project-links{display:flex;flex-direction:column;align-items:flex-start;gap:3px}
+.more-project-links>a{color:var(--lime);text-decoration:none;font:9px var(--mono)}
+.more-project-links>a span{margin-left:6px}
+.case-live-meta{color:#b0aea5}
+.case-live-meta.is-live,.case-live-meta.is-unavailable{color:#b0aea5}
+.case-live-meta a{color:var(--lime);text-decoration:none}
+.case-top,.case-facts>div>span,.case-note,.case-disclaimer,.project-meta p,.project-num,.work-cta>span,.footer-copy,.contact-index{color:#b0aea5}
+.availability,.hero-index,.eyebrow,.workflow-steps p,.skill-index,.socials a{color:#b0aea5}
+.case-facts strong,.case-top,.case-disclaimer,.project-num,.contact-index,.availability,.hero-index,.eyebrow,.skill-index,.footer-copy,.socials a{color:#b0aea5}
+.desktop-nav a span,.location,.hero-footnote,.contact-bottom p,.repo-status,.repo-meta,.repo-meta span:last-child{color:#b0aea5}
+.about-lead span,.services div span{color:#53651f}
+@media(max-width:850px){.more-projects-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.more-projects{margin-top:48px}.more-projects-grid{grid-template-columns:1fr}.more-project-card>p{min-height:0}}

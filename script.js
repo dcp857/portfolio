@@ -36,10 +36,31 @@ if ('IntersectionObserver' in window) {
 }
 
 async function updateRepositoryDetails(element) {
-  const [owner, repository] = element.dataset.repo.split('/');
+  const [owner, repository] = (element.dataset.repo || '').split('/');
+  const repositoryUrl = `https://github.com/${encodeURIComponent(owner)}/${encodeURIComponent(repository)}`;
+  const showFallback = () => {
+    const label = document.createElement('span');
+    label.textContent = `${repository || 'Repository'} details unavailable · `;
+    const link = document.createElement('a');
+    link.href = repositoryUrl;
+    link.target = '_blank';
+    link.rel = 'noreferrer';
+    link.textContent = 'View on GitHub';
+    element.replaceChildren(label, link);
+    element.classList.add('is-unavailable');
+  };
+
+  if (!owner || !repository || !('AbortController' in window)) {
+    showFallback();
+    return;
+  }
+
+  const controller = new AbortController();
+  const timeout = window.setTimeout(() => controller.abort(), 8000);
   try {
     const response = await fetch(`https://api.github.com/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repository)}`, {
-      headers: { Accept: 'application/vnd.github+json' }
+      headers: { Accept: 'application/vnd.github+json' },
+      signal: controller.signal
     });
     if (!response.ok) throw new Error('GitHub repository details are unavailable.');
 
@@ -50,11 +71,18 @@ async function updateRepositoryDetails(element) {
       day: 'numeric', month: 'short', year: 'numeric'
     });
 
-    element.textContent = `${language} · ${stars} ${repo.stargazers_count === 1 ? 'star' : 'stars'} · Updated ${updated} on GitHub`;
+    element.textContent = `${repository} · ${language} · ${stars} ${repo.stargazers_count === 1 ? 'star' : 'stars'} · Updated ${updated} · `;
+    const link = document.createElement('a');
+    link.href = repositoryUrl;
+    link.target = '_blank';
+    link.rel = 'noreferrer';
+    link.textContent = 'View on GitHub';
+    element.append(link);
     element.classList.add('is-live');
   } catch {
-    element.textContent = 'Live GitHub details are temporarily unavailable.';
-    element.classList.add('is-unavailable');
+    showFallback();
+  } finally {
+    window.clearTimeout(timeout);
   }
 }
 
