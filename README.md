@@ -6,7 +6,9 @@ A responsive, single-page portfolio. Open `index.html` in a browser to preview i
 
 - The site presents Dhruv as a student exploring software built by AI agents. The agents plan and implement projects; Dhruv reviews the results and requests improvements.
 - The workflow section explains his role without claiming that he wrote code, planned the project, or has already found a specific bug.
+- The skills section includes Dhruv's stated Python and machine-learning experience alongside his AI-output review and feedback skills. It keeps his personal experience distinct from the AI agents' implementation of featured projects.
 - TradeSageAI is the main project, described as a trading intelligence platform with ML-driven buy/sell signals for stocks and crypto, plus an asset portfolio.
+- The hero uses a clearly labeled illustrative interface concept, not a screenshot of the actual TradeSageAI product.
 - The portfolio website is also listed as a project and links to its source repository at `https://github.com/dcp857/portfolio`.
 - The project list and descriptions are curated so the page shows only projects Dhruv wants to feature; GitHub API responses cannot add unrelated repositories or overwrite those summaries.
 - Each curated project fetches its current language, star count, and last updated date from GitHub when the page loads. If GitHub is unavailable, the project descriptions and links remain visible.

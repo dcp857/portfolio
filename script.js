@@ -17,7 +17,7 @@ navigation?.querySelectorAll('a').forEach((link) => {
 });
 
 const revealTargets = document.querySelectorAll(
-  '.workflow-inner, .section-head, .case-study, .about-inner, .contact > *'
+  '.workflow-inner, .skills-heading, .skill-card, .section-head, .case-study, .about-inner, .contact > *'
 );
 revealTargets.forEach((element) => element.classList.add('reveal'));
 
