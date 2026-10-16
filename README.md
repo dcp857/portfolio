@@ -2,18 +2,12 @@
 
 A responsive, single-page portfolio built with plain HTML, CSS, and JavaScript. Open `index.html` in a browser to preview it; there is no build step.
 
-## About
+## Featured project
 
-The site presents Dhruv as a developer building AI-powered software with AI coding agents. It describes his process as defining the product, directing the build, testing results, and shipping iterations. The skills section includes Python, web fundamentals, machine learning concepts, mathematics, agent specs and prompting, testing, debugging, and GitHub Pages.
+TradeSageAI is a personal trading intelligence platform combining portfolio tracking with a machine-learning signal engine for stocks and cryptocurrency. Its RandomForest baseline and LSTM model are compared side by side. The project uses Python, Flask, Flask-Login session authentication, and a vanilla HTML/CSS/JavaScript dashboard. Its engineering process includes a synopsis, SRS, project management plan, smoke test suites, and phased development.
 
-TradeSageAI is the featured project. It is described as a trading intelligence platform with ML-driven buy and sell signals for stocks and crypto, plus an asset portfolio. A small GitHub API request adds current language, star count, and update date; an eight-second timeout and static GitHub link fallback keep the project useful if the API is unavailable.
+The site links to the [TradeSageAI repository](https://github.com/dcp857/TradeSageAI) and its [project documentation](https://github.com/dcp857/TradeSageAI/tree/main/docs). It makes no performance claims and does not link to a live demo.
 
-## Details to add
-
-- Replace the TradeSageAI screenshot placeholder with a genuine product screenshot.
-- Confirm the ML approach/model, data sources, tech stack, live demo URL (or confirm there is none), and any real results/backtest figures.
-- Add details for any additional projects before adding their cards.
-- Add a resume PDF and link it from the contact section.
-- Add a 1200×630 social preview image and set the Open Graph and Twitter image tags.
+The hero uses a designed title card in place of a product screenshot. The social preview image is `assets/og-image.png` at 1200×630. Open Graph and Twitter metadata reference this image.
 
 Google Fonts load from Google Fonts; system fallbacks are included. Edit colors and layout in `styles.css`.
